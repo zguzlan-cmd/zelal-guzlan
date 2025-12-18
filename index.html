@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Zelal Guzlan — Painting & Drawing</title>
+  <meta name="description" content="Portfolio of Zelal Guzlan, artist specializing in painting and drawing inspired by women’s bodies and emotions." />
+  <style>
+    :root{
+      --bg:#0b0c10;
+      --card:#12131a;
+      --text:#f4f4f6;
+      --muted:#b9bcc7;
+      --line:rgba(255,255,255,.10);
+      --accent:#f3a6c8;
+      --shadow: 0 18px 50px rgba(0,0,0,.35);
+      --radius:18px;
+      --max:1100px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      background:
+        radial-gradient(900px 450px at 15% 10%, rgba(243,166,200,.14), transparent 60%),
+        radial-gradient(900px 450px at 85% 30%, rgba(147,197,253,.10), transparent 60%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.55;
+    }
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding:24px}
+    header{
+      position:sticky; top:0; z-index:20;
+      backdrop-filter: blur(10px);
+      background: rgba(11,12,16,.70);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{display:flex; align-items:center; justify-content:space-between; gap:16px}
+    .brand strong{font-size:1.05rem; letter-spacing:.2px}
+    .brand span{display:block; color:var(--muted); font-size:.95rem; margin-top:2px}
+    .links{display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end}
+    .links a{
+      padding:10px 12px; border:1px solid var(--line); border-radius:999px;
+      color:var(--muted);
+    }
+    .links a:hover{border-color:rgba(243,166,200,.55); color:var(--text)}
+    .card{
+      background: rgba(18,19,26,.82);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+    .hero{
+      padding:42px 0 18px;
+      display:grid;
+      grid-template-columns: 1.35fr .65fr;
+      gap:22px;
+      align-items:start;
+    }
+    @media (max-width: 860px){ .hero{grid-template-columns:1fr} }
+    .hero .card{padding:26px}
+    h1{
+      margin:0 0 8px;
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      line-height:1.1;
+    }
+    .tagline{color:var(--muted); margin:0 0 16px; font-size:1.05rem}
+    .statement{
+      margin:0;
+      color: rgba(255,255,255,.80);
+      font-size:1.02rem;
+    }
+    .pillrow{display:flex; gap:10px; flex-wrap:wrap; margin:16px 0 0}
+    .pill{
+      border:1px solid var(--line);
+      border-radius:999px;
+      padding:8px 12px;
+      color:var(--muted);
+      font-size:.95rem;
+    }
+    .btnrow{display:flex; gap:12px; flex-wrap:wrap; margin-top:18px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:12px 14px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background: transparent;
+      color: var(--text);
+    }
+    .btn.primary{
+      background: linear-gradient(180deg, rgba(243,166,200,.20), rgba(243,166,200,.06));
+      border-color: rgba(243,166,200,.40);
+    }
+    .btn:hover{transform: translateY(-1px)}
+    section{padding:18px 0}
+    .sectionhead{
+      display:flex; align-items:baseline; justify-content:space-between; gap:12px;
+      margin:10px 0 14px;
+    }
+    .sectionhead h2{margin:0; font-size:1.25rem}
+    .sectionhead p{margin:0; color:var(--muted); font-size:.95rem}
+
+    .grid{display:grid; grid-template-columns: repeat(3, 1fr); gap:14px;}
+    @media (max-width: 980px){ .grid{grid-template-columns: repeat(2, 1fr);} }
+    @media (max-width: 620px){ .grid{grid-template-columns: 1fr;} }
+
+    .work{overflow:hidden; min-height: 260px}
+    .thumb{
+      width:100%; height:220px;
+      background: linear-gradient(135deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      border-bottom:1px solid var(--line);
+      display:flex; align-items:center; justify-content:center;
+      color:rgba(255,255,255,.45);
+      font-size:.95rem;
+      text-align:center;
+      padding:16px;
+    }
+    .work img{width:100%; height:220px; object-fit:cover; display:block}
+    .meta{padding:14px}
+    .meta strong{display:block; margin-bottom:4px}
+    .meta span{color:var(--muted); font-size:.95rem}
+
+    .about{
+      padding:22px;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:16px;
+    }
+    @media (max-width: 860px){ .about{grid-template-columns:1fr} }
+    .kv{
+      padding:16px;
+      border:1px solid var(--line);
+      border-radius:16px;
+      background: rgba(255,255,255,.02);
+    }
+    .kv h3{margin:0 0 10px; font-size:1.05rem}
+    .kv ul{margin:0; padding-left:18px; color:var(--muted)}
+    .kv li{margin:8px 0}
+    footer{
+      padding:28px 0 40px;
+      color:var(--muted);
+      border-top:1px solid var(--line);
+      margin-top:24px;
+      text-align:center;
+      font-size:.95rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="wrap nav">
+      <div class="brand">
+        <strong>Zelal Guzlan</strong>
+        <span>Painting & Drawing</span>
+      </div>
+      <nav class="links" aria-label="Primary">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#exhibitions">Workshops & Galleries</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="card">
+        <h1>Painting & drawing inspired by women’s bodies and emotions</h1>
+        <p class="tagline">
+          Portfolio of <strong>Zelal Guzlan</strong>.
+        </p>
+        <p class="statement">
+          Zelal’s work explores the relationship between the body and feeling—capturing tenderness, strength, memory,
+          and the quiet intensity of lived experience through paint and line.
+        </p>
+
+        <div class="pillrow" aria-label="Highlights">
+          <div class="pill">Painting</div>
+          <div class="pill">Drawing</div>
+          <div class="pill">Women’s Bodies</div>
+          <div class="pill">Emotion & Expression</div>
+        </div>
+
+        <div class="btnrow">
+          <a class="btn primary" href="#work">View Selected Works</a>
+          <a class="btn" href="#contact">Commission / Contact</a>
+        </div>
+      </div>
+
+      <aside class="card" style="padding:22px">
+        <h2 style="margin:0 0 10px; font-size:1.2rem;">Qualifications</h2>
+        <ul style="margin:0; padding-left:18px; color:var(--muted)">
+          <li>License in Fine Art (2007)</li>
+          <li>PhD in Fine Art</li>
+        </ul>
+        <div style="height:12px"></div>
+        <p style="margin:0; color:var(--muted); font-size:.95rem">
+          Add awards, residencies, or a short press quote here later.
+        </p>
+      </aside>
+    </section>
+
+    <!-- WORK -->
+    <section id="work">
+      <div class="sectionhead">
+        <h2>Selected Works</h2>
+        <p>Replace placeholders with real images + details.</p>
+      </div>
+
+      <div class="grid">
+        <article class="card work">
+          <div class="thumb">Artwork Image 1 (replace with a real photo)</div>
+          <div class="meta">
+            <strong>Title of Work #1</strong>
+            <span>Oil/Acrylic/Charcoal • Year • Size</span>
+          </div>
+        </article>
+
+        <article class="card work">
+          <div class="thumb">Artwork Image 2 (replace with a real photo)</div>
+          <div class="meta">
+            <strong>Title of Work #2</strong>
+            <span>Medium • Year • Size</span>
+          </div>
+        </article>
+
+        <article class="card work">
+          <div class="thumb">Artwork Image 3 (replace with a real photo)</div>
+          <div class="meta">
+            <strong>Title of Work #3</strong>
+            <span>Medium • Year • Size</span>
+          </div>
+        </article>
+
+        <article class="card work">
+          <div class="thumb">Artwork Image 4 (replace with a real photo)</div>
+          <div class="meta">
+            <strong>Title of Work #4</strong>
+            <span>Medium • Year • Size</span>
+          </div>
+        </article>
+
+        <article class="card work">
+          <div class="thumb">Artwork Image 5 (replace with a real photo)</div>
+          <div class="meta">
+            <strong>Title of Work #5</strong>
+            <span>Medium • Year • Size</span>
+          </div>
+        </article>
+
+        <article class="card work">
+          <div class="thumb">Artwork Image 6 (replace with a real photo)</div>
+          <div class="meta">
+            <strong>Title of Work #6</strong>
+            <span>Medium • Year • Size</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="sectionhead">
+        <h2>About</h2>
+        <p>Bio + artist statement.</p>
+      </div>
+
+      <div class="card about">
+        <div class="kv">
+          <h3>Artist Bio</h3>
+          <p style="margin:0; color:var(--muted)">
+            Zelal Guzlan is an artist specializing in painting and drawing. Her practice is inspired by women’s bodies
+            and emotions, expressed through gesture, texture, and layered forms.
+          </p>
+        </div>
+
+        <div class="kv">
+          <h3>Education</h3>
+          <ul>
+            <li>License in Fine Art (2007)</li>
+            <li>PhD in Fine Art</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORKSHOPS & GALLERIES -->
+    <section id="exhibitions">
+      <div class="sectionhead">
+        <h2>Workshops & Galleries</h2>
+        <p>Add names, years, and locations.</p>
+      </div>
+
+      <div class="card" style="padding:22px">
+        <div class="grid" style="grid-template-columns:repeat(2,1fr)">
+          <div class="kv">
+            <h3>Workshops</h3>
+            <ul>
+              <li>Workshop Name — City, Country — Year</li>
+              <li>Workshop Name — City, Country — Year</li>
+              <li>Workshop Name — City, Country — Year</li>
+            </ul>
+          </div>
+
+          <div class="kv">
+            <h3>Galleries / Exhibitions</h3>
+            <ul>
+              <li>Gallery / Exhibition — City, Country — Year</li>
+              <li>Gallery / Exhibition — City, Country — Year</li>
+              <li>Gallery / Exhibition — City, Country — Year</li>
+            </ul>
+          </div>
+        </div>
+
+        <p style="margin:14px 0 0; color:var(--muted); font-size:.95rem">
+          Optional: add a PDF CV link here (exhibitions list, publications, etc.).
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="sectionhead">
+        <h2>Contact</h2>
+        <p>Commissions, exhibitions, collaborations.</p>
+      </div>
+
+      <div class="card" style="padding:22px">
+        <p style="margin:0 0 12px; color:var(--muted)">
+          Replace the email below with Zelal’s real contact email (and add Instagram if she has one).
+        </p>
+
+        <p style="margin:0">
+          <strong>Email:</strong>
+          <a href="mailto:zelal@example.com" class="btn" style="padding:8px 10px; border-radius:12px;">zelal@example.com</a>
+        </p>
+
+        <div style="height:12px"></div>
+
+        <p style="margin:0; color:var(--muted); font-size:.95rem">
+          Instagram: <a href="#" style="text-decoration:underline">Add link</a> •
+          Behance: <a href="#" style="text-decoration:underline">Add link</a>
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Zelal Guzlan • Painting & Drawing
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
